@@ -1,0 +1,8 @@
+Seq2Pocket repository commit:
+add93ce0803985087347ec8d6078229a7d085184
+
+Seq2Pocket checkpoint SHA256:
+d2db206dd85254a5d2404d4ccf8a1b99aea9952bfb0baaad19428eac6c970dac  external_repos/seq2pocket/published_assets/hf_models/cbs-model.pt
+
+NOTE:
+The 5.4 GB checkpoint itself is intentionally NOT included.

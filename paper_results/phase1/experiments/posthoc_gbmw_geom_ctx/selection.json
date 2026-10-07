@@ -1,0 +1,32 @@
+{
+  "experiment": "posthoc_gbmw_geom_ctx",
+  "criterion": {
+    "ap": 0.5,
+    "bedroc20": 0.5
+  },
+  "selected_on": "train OOF only (nested)",
+  "config_applied_to_test": "eta=1",
+  "config_per_fold": {
+    "train-0": "eta=1",
+    "train-1": "eta=1",
+    "train-2": "eta=1",
+    "train-3": "eta=1"
+  },
+  "n_configs": 5,
+  "meta": {
+    "idea": "GBM residual boosting from pLM logit",
+    "features": [
+      "geom",
+      "ctx"
+    ],
+    "n_features": 36,
+    "final_rounds": 403,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "backend": "lightgbm"
+  },
+  "time": "2026-10-03 08:05:49"
+}

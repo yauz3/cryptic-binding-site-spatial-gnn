@@ -1,0 +1,33 @@
+{
+  "experiment": "rank_toppair_lam0.5",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 8,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "folds": [
+    "train-0",
+    "train-1",
+    "train-2",
+    "train-3"
+  ],
+  "minutes": 7.78,
+  "meta": {
+    "idea": "ranking-aware loss",
+    "rank_loss": "toppair",
+    "lam": 0.5,
+    "tau": 1.0,
+    "top_frac": 0.05,
+    "alpha": 20.0,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "name": null,
+    "no_resume": false
+  }
+}

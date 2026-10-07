@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Residue-level performance on the TEST split. Macro metrics: mean over proteins [95\% bootstrap CI over proteins]. Thresholds for MCC/F1 were tuned on training OOF predictions only.}
+\label{tab:table1_performance_test}
+\begin{tabular}{lrrrrrrrrrrrrrr}
+\toprule
+Method & n proteins & AP & ROC-AUC & EF@1\% & EF@5\% & BEDROC$\_{20}$ & BEDROC$\_{50}$ & BEDROC$\_{80}$ & macro MCC & macro F1 & pooled ROC-AUC & pooled AP & pooled MCC & pooled F1 \\
+\midrule
+ESM-2 MLP (pLM anchor) & 222 & 0.4038 [0.3695, 0.4393] & 0.8244 [0.7993, 0.8479] & 7.8757 [6.9548, 8.8023] & 6.2448 [5.6642, 6.8208] & 0.4874 [0.4492, 0.5254] & 0.4551 [0.4137, 0.4974] & 0.4603 [0.4154, 0.5063] & 0.3275 [0.2936, 0.3613] & 0.3493 [0.3163, 0.3822] & 0.8571 & 0.3389 & 0.3660 & 0.4017 \\
+Anchored spatial GNN & 222 & 0.4656 [0.4276, 0.5042] & 0.8543 [0.8295, 0.8777] & 9.0084 [7.8622, 10.2260] & 7.4280 [6.7571, 8.0794] & 0.5487 [0.5077, 0.5893] & 0.5148 [0.4697, 0.5607] & 0.5158 [0.4674, 0.5658] & 0.3899 [0.3541, 0.4251] & 0.4063 [0.3720, 0.4404] & 0.8832 & 0.4046 & 0.4217 & 0.4491 \\
+Anchored stack & 222 & 0.4700 [0.4313, 0.5095] & 0.8542 [0.8279, 0.8784] & 9.1863 [7.9814, 10.4736] & 7.3093 [6.6380, 7.9743] & 0.5481 [0.5063, 0.5891] & 0.5133 [0.4679, 0.5592] & 0.5152 [0.4665, 0.5646] & 0.3846 [0.3483, 0.4203] & 0.3989 [0.3640, 0.4337] & 0.8837 & 0.4080 & 0.4201 & 0.4502 \\
+\bottomrule
+\end{tabular}
+\end{table}

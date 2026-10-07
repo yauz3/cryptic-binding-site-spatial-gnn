@@ -1,0 +1,22 @@
+{
+  "experiment": "smooth3d",
+  "criterion": {
+    "ap": 0.5,
+    "bedroc20": 0.5
+  },
+  "selected_on": "train OOF only (nested)",
+  "config_applied_to_test": "scale=5|steps=1|lam=0.5",
+  "config_per_fold": {
+    "train-0": "scale=4|steps=1|lam=0.4",
+    "train-1": "scale=5|steps=1|lam=0.5",
+    "train-2": "scale=5|steps=1|lam=0.5",
+    "train-3": "scale=5|steps=1|lam=0.5"
+  },
+  "n_configs": 81,
+  "meta": {
+    "idea": "spatial smoothing",
+    "mode": "3d",
+    "input_logits": "base_plm"
+  },
+  "time": "2026-10-04 20:36:08"
+}

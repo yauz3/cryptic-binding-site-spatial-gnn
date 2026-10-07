@@ -1,0 +1,10 @@
+method,year,evaluation_unit,subset,roc_auc,average_precision_or_auprc,mcc,f1,notes
+CryptoBench_pLM_NN,2025,residue,CryptoBench official test,,,,,Use official paper/repo values; kept literature-only
+Hidden_in_protein_sequences,2025,residue,CryptoBench test,,,,,ESM2-3B fine-tuning variants; literature-only
+Seq2Pocket,2026,residue,CryptoBench test,,,,,pLM + embedding-supported smoothing + surface clustering; literature-only
+UniPocket,2026,residue,CryptoBench retained subset,,,,,Reported on retained 193-protein subset; not directly mixed with full-test reruns
+AE-PocketMiner,2026,residue,external rerun,,,,,Run repository where possible
+Lacuna,2026,candidate,CryptoBench candidate benchmark,,,,,Candidate coverage/ranking metrics are not residue AUC
+PocketMiner,2023,residue,CryptoBench official test,,,,,External baseline
+P2Rank,current,candidate_or_residue,CryptoBench official test,,,,,External baseline
+ProMoNet,current,residue,cryptic-site task,,,,,Repository supports cryptic-site training

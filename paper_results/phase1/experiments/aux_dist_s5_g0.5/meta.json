@@ -1,0 +1,30 @@
+{
+  "experiment": "aux_dist_s5_g0.5",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 8,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "folds": [
+    "train-0",
+    "train-1",
+    "train-2",
+    "train-3"
+  ],
+  "minutes": 6.17,
+  "meta": {
+    "idea": "auxiliary distance-to-site task",
+    "sigma": 5.0,
+    "gamma": 0.5,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "name": null,
+    "no_resume": false
+  }
+}

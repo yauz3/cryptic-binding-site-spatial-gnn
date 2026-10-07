@@ -1,0 +1,22 @@
+Comparator: Seq2Pocket CBS ESM2-3B
+Seq2Pocket commit: add93ce0803985087347ec8d6078229a7d085184
+Checkpoint: cbs-model.pt
+Inference environment:
+  Python 3.12.15
+  torch 2.6.0+cu124
+  transformers 4.48.1
+  huggingface-hub 0.30.1
+  numpy 1.26.4
+
+Coverage:
+  proteins = 222/222
+  residues = 73933
+  failures = 0
+
+Compatibility note:
+The published cbs-model.pt references
+finetuning_utils.MultitaskFinetunedEsmModel.
+The class definition was restored from the authors'
+skrhakv/cryptic-finetuning repository solely for checkpoint deserialization.
+No model weights, thresholds, or prediction parameters were modified.
+d2db206dd85254a5d2404d4ccf8a1b99aea9952bfb0baaad19428eac6c970dac  external_repos/seq2pocket/published_assets/hf_models/cbs-model.pt

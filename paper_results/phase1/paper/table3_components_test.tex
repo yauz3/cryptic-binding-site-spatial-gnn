@@ -1,0 +1,31 @@
+\begin{table}[t]
+\centering
+\small
+\caption{All candidate models and controls versus the pLM anchor (TEST). d: mean per-protein difference; p: sign-flip permutation test (unadjusted); $d_z$: paired Cohen's d.}
+\label{tab:table3_components_test}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Model & dAP & p AP & d\_z AP & dEF@1\% & p EF@1\% & d\_z EF@1\% & dBEDROC$\_{20}$ & p BEDROC$\_{20}$ & d\_z BEDROC$\_{20}$ \\
+\midrule
+Anchored spatial GNN & 0.0618 & 5.0e-05 & 0.6129 & 1.1326 & 0.0069 & 0.1764 & 0.0613 & 5.0e-05 & 0.5816 \\
+Anchored stack & 0.0662 & 5.0e-05 & 0.6338 & 1.3106 & 0.0014 & 0.2048 & 0.0607 & 5.0e-05 & 0.5584 \\
+GNN w/o B-factor features & 0.0579 & 5.0e-05 & 0.5881 & 1.0021 & 0.0093 & 0.1675 & 0.0530 & 5.0e-05 & 0.5022 \\
+posthoc\_gbmw\_geom\_ctx & 0.0449 & 5.0e-05 & 0.5126 & 0.8032 & 0.0176 & 0.1587 & 0.0465 & 5.0e-05 & 0.4866 \\
+posthoc\_gbmw\_grid\_geom\_ctx & 0.0422 & 5.0e-05 & 0.5730 & 0.8672 & 0.0078 & 0.1768 & 0.0426 & 5.0e-05 & 0.5361 \\
+GNN w/o geometry features & 0.0464 & 5.0e-05 & 0.6514 & 0.5488 & 0.0699 & 0.1213 & 0.0419 & 5.0e-05 & 0.5488 \\
+GNN w/o message passing & 0.0328 & 5.0e-05 & 0.4771 & 0.6401 & 0.0202 & 0.1536 & 0.0384 & 5.0e-05 & 0.5289 \\
+3D logit smoothing & 0.0216 & 5.0e-05 & 0.3661 & 0.3947 & 0.2339 & 0.0806 & 0.0151 & 1.0e-04 & 0.2529 \\
+Grid pocket consensus & 0.0145 & 5.0e-05 & 0.3135 & 0.0236 & 0.9405 & 0.0053 & 0.0093 & 0.0020 & 0.2068 \\
+Soft-BEDROC loss & 0.0055 & 0.0274 & 0.1480 & 0.3058 & 0.2650 & 0.0759 & 0.0088 & 4.0e-04 & 0.2411 \\
+Top-pair ranking loss & 0.0048 & 0.1601 & 0.0938 & -0.0153 & 0.9569 & -0.0037 & 0.0076 & 0.0372 & 0.1399 \\
+GBM residual (geom+ctx, no Grid) & 0.0057 & 5.0e-05 & 0.5663 & 0.2205 & 0.0122 & 0.1596 & 0.0050 & 5.0e-05 & 0.4981 \\
+GBM residual (Grid+geom+ctx) & 0.0038 & 5.0e-05 & 0.3802 & 0.1743 & 0.0710 & 0.1207 & 0.0039 & 5.0e-05 & 0.3779 \\
+posthoc\_gbmw\_grid & 0.0016 & 0.0310 & 0.1452 & -0.0231 & 0.8195 & -0.0154 & 0.0021 & 0.0137 & 0.1662 \\
+Sequence-window smoothing & 0.0028 & 0.0015 & 0.2151 & 0.1613 & 0.2181 & 0.0833 & 0.0020 & 0.0319 & 0.1438 \\
+GBM residual (Grid only) & 0.0010 & 0.1090 & 0.1091 & -0.0527 & 0.5825 & -0.0376 & 0.0013 & 0.0838 & 0.1160 \\
+GBM residual (support only) & 0.0007 & 0.0920 & 0.1127 & -0.0172 & 0.8182 & -0.0170 & 0.0004 & 0.3471 & 0.0645 \\
+Aux. distance task & -0.0006 & 0.6434 & -0.0312 & -0.0352 & 0.7667 & -0.0209 & 0.0003 & 0.8267 & 0.0151 \\
+Shuffled-pocket consensus & -0.0010 & 0.2017 & -0.0861 & 0.0282 & 0.8277 & 0.0152 & -0.0004 & 0.5764 & -0.0381 \\
+\bottomrule
+\end{tabular}
+\end{table}

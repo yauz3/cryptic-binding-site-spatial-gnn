@@ -1,0 +1,37 @@
+{
+  "experiment": "ablation_gnn_no_graph",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 8,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "folds": [
+    "train-0",
+    "train-1",
+    "train-2",
+    "train-3"
+  ],
+  "minutes": 9.62,
+  "meta": {
+    "idea": "anchored spatial GNN",
+    "name": "ablation_gnn_no_graph",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "k": 16,
+    "layers": 2,
+    "hidden": 128,
+    "mu": 0.5,
+    "rho": 0.01,
+    "struct_lr_mult": 3.0,
+    "no_graph": true,
+    "no_geom": false,
+    "no_bfactor": false,
+    "no_resume": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "winner": "stack_anchor",
+  "baseline": "base_plm",
+  "J_all_oof": {
+    "base_plm": 0.41685731401865167,
+    "aux_dist_s5_g0.5": 0.41593761912815114,
+    "gbm_resid_grid_geom_ctx": 0.420299696303148,
+    "gnn_anchor": 0.47007198786524806,
+    "pocket_consensus": 0.4299252931954465,
+    "rank_softbedroc_lam1": 0.424344854850017,
+    "rank_toppair_lam0.5": 0.4161947902397805,
+    "smooth3d": 0.4314008082477173,
+    "stack_anchor": 0.47402393690595573
+  },
+  "eligible": [
+    "aux_dist_s5_g0.5",
+    "gbm_resid_grid_geom_ctx",
+    "gnn_anchor",
+    "pocket_consensus",
+    "rank_softbedroc_lam1",
+    "rank_toppair_lam0.5",
+    "smooth3d",
+    "stack_anchor"
+  ],
+  "criterion": {
+    "ap": 0.5,
+    "bedroc20": 0.5
+  },
+  "primary_family": [
+    "ef1",
+    "bedroc20"
+  ],
+  "primary_test": "paired sign-flip permutation test on the mean per-protein difference, Holm over the primary family",
+  "nested_winner_per_fold": {
+    "train-0": "stack_anchor",
+    "train-1": "stack_anchor",
+    "train-2": "stack_anchor",
+    "train-3": "stack_anchor"
+  },
+  "sha256": {
+    "base_plm/oof": "2f27bbbec0599c0c53ecd4ea12b583607f4c6b4f5d559adb942d3eca7ae8436b",
+    "base_plm/test": "6fbe3a8760cd32d0917a4b26d3726f63cba289d9400615b4f2fcffea6d8c6a5a",
+    "stack_anchor/oof": "6855aae070f0ccfc31467c3a57033f90dc39127226acf5f515014caea8b2e326",
+    "stack_anchor/test": "54e5db6e9fba6011ae8b7cb6af7a9faade2870c0fdf13b694b17861ad4a27509"
+  },
+  "frozen_at": "2026-10-02 13:19:05",
+  "note": "Selected on the 885 training proteins (official-fold OOF) only."
+}

@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Ablations of the anchored spatial GNN, paired against the full GNN (OOF).}
+\label{tab:table3b_gnn_ablations_oof}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Ablation & Metric & Full GNN & Ablated & Delta & 95\% CI & p (perm.) & d\_z \\
+\midrule
+GNN w/o B-factor features & AP & 0.4306 & 0.4245 & -0.0060 & [-0.0100, -0.0023] & 0.0022 & -0.1030 \\
+GNN w/o B-factor features & ROC-AUC & 0.8347 & 0.8288 & -0.0060 & [-0.0087, -0.0033] & 5.0e-05 & -0.1420 \\
+GNN w/o B-factor features & EF@1\% & 8.5800 & 8.3841 & -0.1959 & [-0.4360, 0.0478] & 0.1033 & -0.0544 \\
+GNN w/o B-factor features & BEDROC$_{20}$ & 0.5096 & 0.5024 & -0.0072 & [-0.0116, -0.0031] & 9.5e-04 & -0.1124 \\
+GNN w/o geometry features & AP & 0.4306 & 0.4132 & -0.0174 & [-0.0225, -0.0124] & 5.0e-05 & -0.2285 \\
+GNN w/o geometry features & ROC-AUC & 0.8347 & 0.8193 & -0.0154 & [-0.0192, -0.0118] & 5.0e-05 & -0.2744 \\
+GNN w/o geometry features & EF@1\% & 8.5800 & 8.4281 & -0.1519 & [-0.4550, 0.1502] & 0.3214 & -0.0336 \\
+GNN w/o geometry features & BEDROC$_{20}$ & 0.5096 & 0.4900 & -0.0195 & [-0.0253, -0.0140] & 5.0e-05 & -0.2268 \\
+GNN w/o message passing & AP & 0.4306 & 0.4038 & -0.0268 & [-0.0315, -0.0220] & 5.0e-05 & -0.3774 \\
+GNN w/o message passing & ROC-AUC & 0.8347 & 0.8220 & -0.0128 & [-0.0157, -0.0099] & 5.0e-05 & -0.2875 \\
+GNN w/o message passing & EF@1\% & 8.5800 & 8.1915 & -0.3886 & [-0.6788, -0.0999] & 0.0091 & -0.0880 \\
+GNN w/o message passing & BEDROC$_{20}$ & 0.5096 & 0.4885 & -0.0211 & [-0.0261, -0.0161] & 5.0e-05 & -0.2763 \\
+\bottomrule
+\end{tabular}
+\end{table}

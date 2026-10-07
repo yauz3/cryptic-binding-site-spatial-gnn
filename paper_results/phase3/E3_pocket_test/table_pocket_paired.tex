@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Pocket-level retrieval against ESM-2 MLP (pLM anchor), paired per protein. Holm adjustment within the prespecified pocket family ['dcc_topN', 'rro_success'].}
+\label{tab:table_pocket_paired}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Method & Metric & Reference & Method value & Delta & 95\% CI & p (perm.) & p Holm & d\_z & W/T/L \\
+\midrule
+Anchored spatial GNN & dcc\_top1 & 0.2233 & 0.2636 & 0.0403 & [0.0013, 0.0803] & 0.0521 & -- & 0.1311 & 22/186/14 \\
+Anchored spatial GNN & dcc\_top3 & 0.2373 & 0.2967 & 0.0594 & [0.0199, 0.1008] & 0.0048 & -- & 0.1886 & 26/183/13 \\
+Anchored spatial GNN & dcc\_top5 & 0.2373 & 0.2967 & 0.0594 & [0.0199, 0.1008] & 0.0048 & -- & 0.1886 & 26/183/13 \\
+Anchored spatial GNN & dcc\_topN & 0.2328 & 0.2922 & 0.0594 & [0.0199, 0.1008] & 0.0048 & 0.0048 & 0.1886 & 26/183/13 \\
+Anchored spatial GNN & dcc\_topN2 & 0.2373 & 0.2967 & 0.0594 & [0.0199, 0.1008] & 0.0048 & -- & 0.1886 & 26/183/13 \\
+Anchored spatial GNN & rro & 0.2659 & 0.3059 & 0.0399 & [0.0295, 0.0510] & 1.0e-05 & -- & 0.4816 & 128/42/52 \\
+Anchored spatial GNN & rro\_recall & 0.5196 & 0.6106 & 0.0910 & [0.0729, 0.1097] & 1.0e-05 & -- & 0.6361 & 124/72/26 \\
+Anchored spatial GNN & rro\_success & 0.1622 & 0.2297 & 0.0676 & [0.0314, 0.1081] & 0.0016 & 0.0032 & 0.2247 & 18/201/3 \\
+Anchored spatial GNN & site\_found & 0.2883 & 0.3559 & 0.0676 & [0.0270, 0.1126] & 0.0041 & -- & 0.2051 & 20/197/5 \\
+Anchored stack & dcc\_top1 & 0.2233 & 0.2654 & 0.0421 & [0.0027, 0.0827] & 0.0427 & -- & 0.1365 & 25/181/16 \\
+Anchored stack & dcc\_top3 & 0.2373 & 0.2920 & 0.0548 & [0.0136, 0.0955] & 0.0099 & -- & 0.1728 & 29/178/15 \\
+Anchored stack & dcc\_top5 & 0.2373 & 0.2920 & 0.0548 & [0.0136, 0.0955] & 0.0099 & -- & 0.1728 & 29/178/15 \\
+Anchored stack & dcc\_topN & 0.2328 & 0.2875 & 0.0548 & [0.0136, 0.0955] & 0.0099 & 0.0099 & 0.1728 & 29/178/15 \\
+Anchored stack & dcc\_topN2 & 0.2373 & 0.2920 & 0.0548 & [0.0136, 0.0955] & 0.0099 & -- & 0.1728 & 29/178/15 \\
+Anchored stack & rro & 0.2659 & 0.3083 & 0.0424 & [0.0315, 0.0538] & 1.0e-05 & -- & 0.4998 & 137/37/48 \\
+Anchored stack & rro\_recall & 0.5196 & 0.6198 & 0.1002 & [0.0815, 0.1196] & 1.0e-05 & -- & 0.6757 & 133/63/26 \\
+Anchored stack & rro\_success & 0.1622 & 0.2297 & 0.0676 & [0.0270, 0.1081] & 0.0027 & 0.0055 & 0.2142 & 19/199/4 \\
+Anchored stack & site\_found & 0.2883 & 0.3468 & 0.0586 & [0.0090, 0.1081] & 0.0296 & -- & 0.1583 & 22/191/9 \\
+\bottomrule
+\end{tabular}
+\end{table}

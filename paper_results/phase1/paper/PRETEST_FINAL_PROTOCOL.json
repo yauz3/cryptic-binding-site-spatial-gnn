@@ -1,0 +1,136 @@
+{
+  "created_before_final_test_unlock": "2026-10-03T09:00:13.111270",
+  "dataset": "CryptoBench",
+  "core_architecture": "gnn_anchor",
+  "frozen_performance_model": "stack_anchor",
+  "model_selection_criterion": {
+    "ap": 0.5,
+    "bedroc20": 0.5
+  },
+  "frozen_primary_family": [
+    "ef1",
+    "bedroc20"
+  ],
+  "secondary_metrics": [
+    "AP",
+    "ROC-AUC",
+    "EF@3",
+    "EF@5",
+    "BEDROC50",
+    "BEDROC80",
+    "MCC",
+    "F1"
+  ],
+  "replicate_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129
+  ],
+  "post_hoc_analyses": [
+    "scripts/14b: GBM residual with class-weighted early stopping (posthoc_gbmw_*), train-OOF only, exploratory; added after the freeze because every frozen GBM fit stopped at the 10-tree floor. Not an input of the frozen stack."
+  ],
+  "pilot_seeds": [
+    0,
+    1,
+    2
+  ],
+  "inference_unit": "protein",
+  "primary_inference": "paired protein-level sign-flip permutation test with Holm correction",
+  "seed_statistics": "training-stability analysis only; not treated as independent proteins",
+  "scientific_claim": "pLM-anchored spatial GNN is the mechanistic core; stack_anchor is the frozen performance ensemble; Grid is evaluated as a secondary/marginal structural contribution.",
+  "frozen_selection": {
+    "winner": "stack_anchor",
+    "baseline": "base_plm",
+    "J_all_oof": {
+      "base_plm": 0.41685731401865167,
+      "aux_dist_s5_g0.5": 0.41593761912815114,
+      "gbm_resid_grid_geom_ctx": 0.420299696303148,
+      "gnn_anchor": 0.47007198786524806,
+      "pocket_consensus": 0.4299252931954465,
+      "rank_softbedroc_lam1": 0.424344854850017,
+      "rank_toppair_lam0.5": 0.4161947902397805,
+      "smooth3d": 0.4314008082477173,
+      "stack_anchor": 0.47402393690595573
+    },
+    "eligible": [
+      "aux_dist_s5_g0.5",
+      "gbm_resid_grid_geom_ctx",
+      "gnn_anchor",
+      "pocket_consensus",
+      "rank_softbedroc_lam1",
+      "rank_toppair_lam0.5",
+      "smooth3d",
+      "stack_anchor"
+    ],
+    "criterion": {
+      "ap": 0.5,
+      "bedroc20": 0.5
+    },
+    "primary_family": [
+      "ef1",
+      "bedroc20"
+    ],
+    "primary_test": "paired sign-flip permutation test on the mean per-protein difference, Holm over the primary family",
+    "nested_winner_per_fold": {
+      "train-0": "stack_anchor",
+      "train-1": "stack_anchor",
+      "train-2": "stack_anchor",
+      "train-3": "stack_anchor"
+    },
+    "sha256": {
+      "base_plm/oof": "2f27bbbec0599c0c53ecd4ea12b583607f4c6b4f5d559adb942d3eca7ae8436b",
+      "base_plm/test": "6fbe3a8760cd32d0917a4b26d3726f63cba289d9400615b4f2fcffea6d8c6a5a",
+      "stack_anchor/oof": "6855aae070f0ccfc31467c3a57033f90dc39127226acf5f515014caea8b2e326",
+      "stack_anchor/test": "54e5db6e9fba6011ae8b7cb6af7a9faade2870c0fdf13b694b17861ad4a27509"
+    },
+    "frozen_at": "2026-10-02 13:19:05",
+    "note": "Selected on the 885 training proteins (official-fold OOF) only."
+  },
+  "code_sha256": {
+    "run_paper.sh": "3a2c3773a9c840b38f6f51700a9591d35ba831b46b844ac28634f6bbbce5692b",
+    "config.yaml": "6c170d7e6a6356a4dabb3fd57841e2147b1c3f4e79639b4f63d0c63db1bd096a",
+    "scripts/11_baseline_multiseed.py": "55843e1063bbfd26cf3778083c8d5be3d79ff907777626fac72323e0b1f005fb",
+    "scripts/12_spatial_smoothing.py": "a06479f3202b240d754df8e1afcae471cdd844fa805c93fc221a184e65aa789a",
+    "scripts/13_pocket_consensus.py": "d0a855d40ccc7ef213b0cbff60a7a0214744e7d6df7b2a4f5e85c15b69767188",
+    "scripts/14_gbm_residual_boost.py": "53acadfc49401650d7c08394edcf10edf5f266950c036a22f324ad70f4f9f240",
+    "scripts/14b_gbm_residual_weighted_earlystop.py": "a135175eabc1b69788437e42f91075d4da13d922a05ad77f7fbfb06747ae8602",
+    "scripts/16_rank_loss.py": "e5cfbc01bd0c3408dcf673e6cc85e36279b9036f52b307733ef8e48b736b06bc",
+    "scripts/17_aux_distance_multitask.py": "eb96fc08cf939efef9fe73c4e6f70a7033376c516f0d23208903971257a91fce",
+    "scripts/15_anchored_spatial_gnn.py": "76369cf91a0f0094874e54314fbc354e4851e4667aaa18c42233028037618a1b",
+    "scripts/18_constrained_stacker.py": "87c2a79d25e977cf7263c2c96d219bcd20dfbeae1fe55f0cc882e20d7bac5792",
+    "scripts/19_stats_and_freeze.py": "10addd5a70aa29a99b944b1115f0b2d332054836abd301a59efa8ac7a4d5a690",
+    "scripts/20_replicate_runs.py": "3fe8c0d29929bcba83c50d709dfcf9d87f6617562140e2c2b6916fb2ee90dbc2",
+    "scripts/21_replicate_analysis.py": "6a0a0eb25db6bbc7ebcc67d501781cb30714927b80fac417fb3bae22436857de",
+    "scripts/22_paper_report.py": "4c921965830be807784fe17ac913c8cca0c84741887fda1a28a88966aba225fd",
+    "cryptogrid/exp_common.py": "07ab1f76062ecd3095e37d693f66d0637e1b4207386d2b8b2f2328170c5f8ba2",
+    "cryptogrid/exp_models.py": "8c4fb17848a4fbff4dadf2044fee2b764fb7da08ad63612db83e4c10dc1faddf",
+    "cryptogrid/exp_stats.py": "0b8cbbac665d1d9cba51bbd8a8454b3548a593817a078f3cac1ef02f0a4f8323"
+  }
+}

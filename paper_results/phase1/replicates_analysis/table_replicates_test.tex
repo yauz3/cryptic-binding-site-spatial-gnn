@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Seed replicates (30 independent seeds), TEST split. SD is over seeds. The confidence interval resamples proteins and seeds jointly. p: paired sign-flip permutation test over proteins on seed-averaged differences. Seed-level $d_z$ quantifies training stability only.}
+\label{tab:table_replicates_test}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Method & Metric & Anchor (mean$\pm$SD) & Method (mean$\pm$SD) & Delta & 95\% CI (proteins x seeds) & Seeds improved & d\_z (proteins) & p (proteins) & d\_z (seeds) \\
+\midrule
+Anchored spatial GNN & AP & 0.3966$\pm$0.0041 & 0.4521$\pm$0.0069 & 0.0555 & [0.0443, 0.0667] & 30/30 & 0.6779 & 1.0e-05 & 9.1698 \\
+Anchored spatial GNN & ROC-AUC & 0.8232$\pm$0.0015 & 0.8505$\pm$0.0031 & 0.0273 & [0.0197, 0.0349] & 30/30 & 0.4836 & 1.0e-05 & 10.4238 \\
+Anchored spatial GNN & EF@1\% & 7.8510$\pm$0.1829 & 8.6970$\pm$0.2646 & 0.8460 & [0.3713, 1.3456] & 30/30 & 0.2361 & 3.0e-04 & 2.8567 \\
+Anchored spatial GNN & EF@5\% & 6.2256$\pm$0.0785 & 7.1140$\pm$0.1454 & 0.8884 & [0.6760, 1.1100] & 30/30 & 0.5562 & 1.0e-05 & 6.4971 \\
+Anchored spatial GNN & BEDROC$_{20}$ & 0.4817$\pm$0.0039 & 0.5341$\pm$0.0072 & 0.0524 & [0.0406, 0.0639] & 30/30 & 0.6119 & 1.0e-05 & 8.2273 \\
+Anchored spatial GNN & BEDROC$_{50}$ & 0.4495$\pm$0.0050 & 0.4992$\pm$0.0075 & 0.0497 & [0.0355, 0.0642] & 30/30 & 0.4735 & 1.0e-05 & 6.8088 \\
+Anchored spatial GNN & BEDROC$_{80}$ & 0.4536$\pm$0.0056 & 0.5014$\pm$0.0078 & 0.0477 & [0.0314, 0.0646] & 30/30 & 0.3932 & 1.0e-05 & 5.7024 \\
+Anchored stack & AP & 0.3966$\pm$0.0041 & 0.4580$\pm$0.0055 & 0.0614 & [0.0504, 0.0721] & 30/30 & 0.7669 & 1.0e-05 & 12.1579 \\
+Anchored stack & ROC-AUC & 0.8232$\pm$0.0015 & 0.8489$\pm$0.0026 & 0.0257 & [0.0172, 0.0339] & 30/30 & 0.4114 & 1.0e-05 & 11.2042 \\
+Anchored stack & EF@1\% & 7.8510$\pm$0.1829 & 8.7827$\pm$0.2013 & 0.9317 & [0.4301, 1.4405] & 30/30 & 0.2500 & 1.1e-04 & 3.8934 \\
+Anchored stack & EF@5\% & 6.2256$\pm$0.0785 & 7.1074$\pm$0.1227 & 0.8818 & [0.6719, 1.0994] & 30/30 & 0.5659 & 1.0e-05 & 6.8795 \\
+Anchored stack & BEDROC$_{20}$ & 0.4817$\pm$0.0039 & 0.5365$\pm$0.0059 & 0.0548 & [0.0435, 0.0657] & 30/30 & 0.6600 & 1.0e-05 & 9.7048 \\
+Anchored stack & BEDROC$_{50}$ & 0.4495$\pm$0.0050 & 0.5030$\pm$0.0060 & 0.0535 & [0.0395, 0.0673] & 30/30 & 0.5243 & 1.0e-05 & 7.8507 \\
+Anchored stack & BEDROC$_{80}$ & 0.4536$\pm$0.0056 & 0.5056$\pm$0.0061 & 0.0520 & [0.0358, 0.0684] & 30/30 & 0.4401 & 1.0e-05 & 6.7401 \\
+\bottomrule
+\end{tabular}
+\end{table}

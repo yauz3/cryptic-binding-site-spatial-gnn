@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    "smooth3d",
+    "pocket_consensus",
+    "gbm_resid_grid_geom_ctx",
+    "gnn_anchor",
+    "rank_toppair_lam0.5",
+    "rank_softbedroc_lam1",
+    "aux_dist_s5_g0.5"
+  ],
+  "grid_derived": [
+    "pocket_consensus",
+    "gbm_resid_grid_geom_ctx"
+  ]
+}

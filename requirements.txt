@@ -1,0 +1,19 @@
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+matplotlib>=3.7
+pyyaml>=6.0
+requests>=2.31
+networkx>=3.1
+torch>=2.1
+transformers>=4.40
+accelerate>=0.28
+umap-learn>=0.5.5
+xgboost>=2.0
+shap>=0.45
+lime>=0.2.0.1
+lightgbm>=4.0
+biopython>=1.81   # Bio.PDB mmCIF parsing (scripts 01, 10, 13)
+tabulate>=0.9     # optional: markdown tables in PAPER_NUMBERS.md
+rdkit             # optional: legacy analysis only; BEDROC in scripts 10-22 is implemented in exp_common

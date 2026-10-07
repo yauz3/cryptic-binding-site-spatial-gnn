@@ -1,0 +1,22 @@
+{
+  "experiment": "pocket_consensus",
+  "criterion": {
+    "ap": 0.5,
+    "bedroc20": 0.5
+  },
+  "selected_on": "train OOF only (nested)",
+  "config_applied_to_test": "pool=lme|agg=mean|scale=all|lam=0.6",
+  "config_per_fold": {
+    "train-0": "pool=lme|agg=mean|scale=all|lam=0.6",
+    "train-1": "pool=lme|agg=mean|scale=all|lam=0.6",
+    "train-2": "pool=lme|agg=mean|scale=all|lam=0.6",
+    "train-3": "pool=lme|agg=mean|scale=all|lam=0.6"
+  },
+  "n_configs": 73,
+  "meta": {
+    "idea": "pocket consensus",
+    "shuffled": false,
+    "input_logits": "base_plm"
+  },
+  "time": "2026-10-02 11:28:15"
+}

@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Paired per-protein comparison against ESM-2 MLP (pLM anchor) on the predicted structures (100 - pLDDT). p (perm.): two-sided sign-flip permutation test on the mean per-protein difference; Holm adjustment within the prespecified primary family ['ef1', 'bedroc20']; $d_z$: paired Cohen's d.}
+\label{tab:table_paired_vs_base_plm}
+\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+Model & Metric & Reference & Model value & Delta & 95\% CI & p (perm.) & p Holm & p (Wilcoxon) & d\_z & d\_z 95\% CI & r\_rb & W/T/L \\
+\midrule
+Anchored spatial GNN & AP & 0.4038 & 0.3895 & -0.0143 & [-0.0198, -0.0088] & 1.0e-05 & -- & 3.1e-07 & -0.3403 & [-0.479, -0.212] & -0.3961 & 82/0/140 \\
+Anchored spatial GNN & ROC-AUC & 0.8244 & 0.8181 & -0.0062 & [-0.0088, -0.0035] & 1.0e-05 & -- & 1.1e-07 & -0.3077 & [-0.453, -0.172] & -0.4122 & 70/1/151 \\
+Anchored spatial GNN & EF@1\% & 7.8757 & 7.6023 & -0.2734 & [-0.7194, 0.2106] & 0.2663 & 0.2663 & 0.0781 & -0.0756 & [-0.228, 0.052] & -0.2863 & 20/172/30 \\
+Anchored spatial GNN & EF@5\% & 6.2448 & 6.0514 & -0.1934 & [-0.3523, -0.0409] & 0.0147 & -- & 0.0425 & -0.1624 & [-0.277, -0.041] & -0.2269 & 46/116/60 \\
+Anchored spatial GNN & BEDROC$_{20}$ & 0.4874 & 0.4724 & -0.0150 & [-0.0212, -0.0084] & 2.0e-05 & 4.0e-05 & 1.4e-06 & -0.3073 & [-0.445, -0.181] & -0.3734 & 80/0/142 \\
+Anchored spatial GNN & BEDROC$_{50}$ & 0.4551 & 0.4418 & -0.0134 & [-0.0229, -0.0036] & 0.0087 & -- & 5.2e-04 & -0.1760 & [-0.332, -0.042] & -0.2687 & 94/0/128 \\
+Anchored spatial GNN & BEDROC$_{80}$ & 0.4603 & 0.4472 & -0.0131 & [-0.0262, 0.0003] & 0.0492 & -- & 0.0043 & -0.1325 & [-0.299, 0.003] & -0.2212 & 97/0/125 \\
+Anchored spatial GNN & MCC & 0.3275 & 0.2890 & -0.0385 & [-0.0516, -0.0255] & 1.0e-05 & -- & 2.6e-06 & -0.3834 & [-0.496, -0.277] & -0.3732 & 100/11/111 \\
+Anchored spatial GNN & F1 & 0.3493 & 0.3038 & -0.0455 & [-0.0583, -0.0332] & 1.0e-05 & -- & 4.8e-10 & -0.4601 & [-0.570, -0.356] & -0.5457 & 60/49/113 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,36 @@
+{
+  "winner": "gnn_anchor",
+  "baseline": "base_plm",
+  "J_all_oof": {
+    "base_plm": 0.4138778671090124,
+    "gnn_anchor": 0.46384784981740523,
+    "smooth3d": 0.42938978717957926
+  },
+  "eligible": [
+    "gnn_anchor",
+    "smooth3d"
+  ],
+  "criterion": {
+    "ap": 0.5,
+    "bedroc20": 0.5
+  },
+  "primary_family": [
+    "ef1",
+    "bedroc20"
+  ],
+  "primary_test": "paired sign-flip permutation test on the mean per-protein difference, Holm over the primary family",
+  "nested_winner_per_fold": {
+    "train-0": "gnn_anchor",
+    "train-1": "gnn_anchor",
+    "train-2": "gnn_anchor",
+    "train-3": "gnn_anchor"
+  },
+  "sha256": {
+    "base_plm/oof": "63a8ebccf944fef947b5a6bdc27df6f45d86fae97b247ce68e98af2441901237",
+    "base_plm/test": "dbc08066ba94f7eb77c44d363c831294b1561a5f33cea4bea37b1e921b85fdbe",
+    "gnn_anchor/oof": "08673311a6494cca283f979bd545e2d489659606e26230e46c6f533753790c12",
+    "gnn_anchor/test": "f05c05183ecaf35629839a8ba8ed8e069742cb4eeeda88fd052b529472b4b3ad"
+  },
+  "frozen_at": "2026-10-05 10:17:00",
+  "note": "Selected on the 885 training proteins (official-fold OOF) only."
+}

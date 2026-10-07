@@ -1,0 +1,71 @@
+project:
+  gridcrypto_root: /path/to/Grid-cyrpto
+  folds_json: /path/to/Grid-cyrpto/folds.json
+  dataset_json: /path/to/Grid-cyrpto/dataset.json
+  pdb_root: /path/to/Grid-cyrpto/data/conversion
+  cif_root: /path/to/cryptobench_cifs
+  grid_features_dir: /path/to/Grid-cyrpto/data/training_grids/features
+  grid_glob: "*_features.csv"
+
+work:
+  root: ./work
+  struct_cache: ./work/cache_struct
+  esm_cache: ./work/cache_esm
+  results: ./results
+
+features:
+  aggregations: [mean, max]
+  pocket_residue_column: pocket_residues_list
+  protein_column: pdb_id
+  drop_columns:
+    - pdb_pocket
+    - pdb_id
+    - grid_size
+    - pocket_name
+    - label_side
+    - overlap_count
+    - overlap_ratio
+    - jaccard_index
+    - center_x
+    - center_y
+    - center_z
+    - pocket_residues_count
+    - cryptic_residues_count
+    - pocket_residues_list
+    - pocket_path
+    - raw_pocket_id
+    - _source_file
+
+esm:
+  model_name: facebook/esm2_t33_650M_UR50D
+  max_tokens: 1000
+  overlap: 128
+  fp16_cache: true
+
+training:
+  seed: 42
+  epochs: 8
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  dropout: 0.30
+  hidden_plm: 256
+  hidden_struct: 192
+  hidden_fusion: 256
+  calibration_fold: train_3
+  threshold_metric: mcc
+  device: auto
+  variants:
+    - plm_only
+    - grid_only
+    - early_concat
+    - dual_tower
+
+evaluation:
+  label_side: apo
+  bootstrap_reps: 1000
+
+ablation:
+  validation_fold: train_3
+  max_train_residues_classical: 150000
+  max_valid_residues_classical: 60000
+  top_features_per_family: 128

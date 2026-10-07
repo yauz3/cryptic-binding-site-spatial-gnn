@@ -1,0 +1,68 @@
+ablation:
+  max_train_residues_classical: 150000
+  max_valid_residues_classical: 60000
+  top_features_per_family: 128
+  validation_fold: train_3
+esm:
+  fp16_cache: true
+  max_tokens: 1000
+  model_name: facebook/esm2_t33_650M_UR50D
+  overlap: 128
+evaluation:
+  bootstrap_reps: 1000
+  label_side: apo
+features:
+  aggregations:
+  - mean
+  - max
+  drop_columns:
+  - pdb_pocket
+  - pdb_id
+  - grid_size
+  - pocket_name
+  - label_side
+  - overlap_count
+  - overlap_ratio
+  - jaccard_index
+  - center_x
+  - center_y
+  - center_z
+  - pocket_residues_count
+  - cryptic_residues_count
+  - pocket_residues_list
+  - pocket_path
+  - raw_pocket_id
+  - _source_file
+  pocket_residue_column: pocket_residues_list
+  protein_column: pdb_id
+project:
+  cif_root: /home/yavuz/yavuz_proje/cryptic_binding_site/cryptobench_gridfusion_suite/external_data/cryptobench_cifs
+  dataset_json: /home/yavuz/yavuz_proje/cryptic_binding_site/Grid-cyrpto/dataset.json
+  folds_json: /home/yavuz/yavuz_proje/cryptic_binding_site/Grid-cyrpto/folds.json
+  grid_features_dir: /home/yavuz/yavuz_proje/cryptic_binding_site/Grid-cyrpto/data/training_grids/features
+  grid_glob: '*_features.csv'
+  gridcrypto_root: /home/yavuz/yavuz_proje/cryptic_binding_site/Grid-cyrpto
+  pdb_root: /home/yavuz/yavuz_proje/cryptic_binding_site/Grid-cyrpto/data/conversion
+training:
+  calibration_fold: train_3
+  device: auto
+  dropout: 0.3
+  epochs: 8
+  hidden_fusion: 256
+  hidden_plm: 256
+  hidden_struct: 192
+  learning_rate: 0.0001
+  seed: 42
+  threshold_metric: mcc
+  variants:
+  - plm_only
+  - grid_only
+  - early_concat
+  - dual_tower
+  weight_decay: 0.0001
+work:
+  esm_cache: /home/yavuz/yavuz_proje/cryptic_binding_site/cryptobench_gridfusion_suite_github_2/cryptobench_gridfusion_suite/additional_experiment_2/results/cache_esm3b
+  frozen_esm_cache: ./work/cache_esm
+  results: /home/yavuz/yavuz_proje/cryptic_binding_site/cryptobench_gridfusion_suite_github_2/cryptobench_gridfusion_suite/additional_experiment_2/results/e2_esm3b
+  root: ./work
+  struct_cache: ./work/cache_struct

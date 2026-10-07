@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Non-negative weights of the anchored stack (fitted on training OOF predictions).}
+\label{tab:table6_stack_weights}
+\begin{tabular}{lrrr}
+\toprule
+input & weight\_scaled & sd\_correction & weight\_per\_logit \\
+\midrule
+3D logit smoothing & 0.0195 & 0.5582 & 0.0349 \\
+Grid pocket consensus & 0.2871 & 0.8412 & 0.3413 \\
+GBM residual (Grid+geom+ctx) & 0.5248 & 0.2500 & 2.0992 \\
+Anchored spatial GNN & 0.4962 & 0.8641 & 0.5742 \\
+Top-pair ranking loss & 0.1669 & 0.5469 & 0.3052 \\
+Soft-BEDROC loss & 0.0069 & 0.7056 & 0.0098 \\
+Aux. distance task & 0.0055 & 0.2019 & 0.0271 \\
+\bottomrule
+\end{tabular}
+\end{table}

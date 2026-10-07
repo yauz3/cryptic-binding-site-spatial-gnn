@@ -1,0 +1,83 @@
+# Cryptic Binding-Site Spatial GNN - public repository ignores
+
+# Local machine configuration
+config.yaml
+
+# Working caches / generated data
+work/
+external_data/
+external_predictions/
+external_repos/
+
+# Large generated results
+results/
+additional_experiment/results/
+additional_experiment_2/results/
+
+# External / third-party datasets
+additional_experiment/external_data/
+additional_experiment_2/external_data/
+additional_experiment_2/comparator_raw/
+additional_experiment_2/comparator_predictions/
+additional_experiment_2/predicted_structures/
+additional_experiment_2/published_subsets/
+
+# Backups
+additional_experiment/backup_*/
+additional_experiment_2/backup_*/
+backup_*/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Model weights / large binary data
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.pkl
+*.pickle
+*.joblib
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.parquet
+*.feather
+
+# Runtime output
+*.log
+nohup.out
+*.pid
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Editors / OS
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
+
+# Internal development artefacts
+grid_audit_filelist.txt
+python_codes_updated.txt
+reference_original/
+legacy_analysis_examples/
+*.before_*
+README.md.pre_public_release
+.gitignore.pre_public_release

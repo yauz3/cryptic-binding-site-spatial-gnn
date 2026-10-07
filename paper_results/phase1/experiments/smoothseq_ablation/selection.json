@@ -1,0 +1,22 @@
+{
+  "experiment": "smoothseq_ablation",
+  "criterion": {
+    "ap": 0.5,
+    "bedroc20": 0.5
+  },
+  "selected_on": "train OOF only (nested)",
+  "config_applied_to_test": "scale=3|steps=1|lam=0.1",
+  "config_per_fold": {
+    "train-0": "scale=3|steps=1|lam=0.1",
+    "train-1": "scale=3|steps=1|lam=0.1",
+    "train-2": "scale=3|steps=1|lam=0.1",
+    "train-3": "scale=3|steps=1|lam=0.1"
+  },
+  "n_configs": 65,
+  "meta": {
+    "idea": "spatial smoothing",
+    "mode": "sequence",
+    "input_logits": "base_plm"
+  },
+  "time": "2026-10-02 12:16:26"
+}

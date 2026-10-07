@@ -1,0 +1,83 @@
+{
+  "experiment": "stack_anchor",
+  "inputs": [
+    "smooth3d",
+    "pocket_consensus",
+    "gbm_resid_grid_geom_ctx",
+    "gnn_anchor",
+    "rank_toppair_lam0.5",
+    "rank_softbedroc_lam1",
+    "aux_dist_s5_g0.5"
+  ],
+  "lam_for_test": 0.0,
+  "lam_grid": [
+    1.0,
+    0.3,
+    0.1,
+    0.03,
+    0.01,
+    0.001,
+    0.0
+  ],
+  "J_crossfit_by_lam": [
+    0.4273082688891331,
+    0.4432311880368297,
+    0.4605152347265099,
+    0.4701975978562718,
+    0.47242018933678037,
+    0.4738534423526695,
+    0.47404127062764817
+  ],
+  "per_fold": {
+    "train-0": {
+      "lam": 0.0,
+      "weights": {
+        "smooth3d": 0.01912,
+        "pocket_consensus": 0.35683,
+        "gbm_resid_grid_geom_ctx": 0.45773,
+        "gnn_anchor": 0.52266,
+        "rank_toppair_lam0.5": 0.14777,
+        "rank_softbedroc_lam1": 0.0,
+        "aux_dist_s5_g0.5": 0.0001
+      }
+    },
+    "train-1": {
+      "lam": 0.0,
+      "weights": {
+        "smooth3d": 0.02322,
+        "pocket_consensus": 0.2441,
+        "gbm_resid_grid_geom_ctx": 0.58061,
+        "gnn_anchor": 0.47054,
+        "rank_toppair_lam0.5": 0.17533,
+        "rank_softbedroc_lam1": 0.0,
+        "aux_dist_s5_g0.5": 0.0
+      }
+    },
+    "train-2": {
+      "lam": 0.001,
+      "weights": {
+        "smooth3d": 0.06534,
+        "pocket_consensus": 0.24458,
+        "gbm_resid_grid_geom_ctx": 0.48522,
+        "gnn_anchor": 0.47929,
+        "rank_toppair_lam0.5": 0.20265,
+        "rank_softbedroc_lam1": 0.02927,
+        "aux_dist_s5_g0.5": 0.00165
+      }
+    },
+    "train-3": {
+      "lam": 0.0,
+      "weights": {
+        "smooth3d": 0.0,
+        "pocket_consensus": 0.29453,
+        "gbm_resid_grid_geom_ctx": 0.55245,
+        "gnn_anchor": 0.50349,
+        "rank_toppair_lam0.5": 0.1303,
+        "rank_softbedroc_lam1": 0.00895,
+        "aux_dist_s5_g0.5": 0.02401
+      }
+    }
+  },
+  "intercept": 0.25723884193290897,
+  "selected_on": "train OOF only (double nested)"
+}

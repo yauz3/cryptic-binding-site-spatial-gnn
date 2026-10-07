@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Pocket-level retrieval on the TEST split. Every method's per-residue scores were converted into ranked pockets with one identical pipeline (top 10% of residues, single-linkage at 8\,\AA, clusters of $\geq$3 residues). DCC success at 4\,\AA; RRO is the Jaccard overlap with success at 0.50. Values are means over proteins with 95\% bootstrap intervals.}
+\label{tab:table_pocket_absolute}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Method & Proteins & Pockets/protein & dcc\_top1 & dcc\_top3 & dcc\_top5 & dcc\_topN & dcc\_topN2 & rro & rro\_recall & rro\_success & site\_found \\
+\midrule
+ESM-2 MLP (pLM anchor) & 222 & 1.51 & 0.2233 [0.1741, 0.2759] & 0.2373 [0.1842, 0.2905] & 0.2373 [0.1842, 0.2905] & 0.2328 [0.1820, 0.2853] & 0.2373 [0.1842, 0.2905] & 0.2659 [0.2406, 0.2922] & 0.5196 [0.4743, 0.5628] & 0.1622 [0.1171, 0.2117] & 0.2883 [0.2297, 0.3468] \\
+Anchored spatial GNN & 222 & 1.28 & 0.2636 [0.2104, 0.3184] & 0.2967 [0.2404, 0.3545] & 0.2967 [0.2404, 0.3545] & 0.2922 [0.2359, 0.3495] & 0.2967 [0.2404, 0.3545] & 0.3059 [0.2787, 0.3336] & 0.6106 [0.5655, 0.6546] & 0.2297 [0.1756, 0.2883] & 0.3559 [0.2928, 0.4189] \\
+Anchored stack & 222 & 1.24 & 0.2654 [0.2105, 0.3199] & 0.2920 [0.2362, 0.3485] & 0.2920 [0.2362, 0.3485] & 0.2875 [0.2316, 0.3433] & 0.2920 [0.2362, 0.3485] & 0.3083 [0.2808, 0.3359] & 0.6198 [0.5751, 0.6629] & 0.2297 [0.1757, 0.2883] & 0.3468 [0.2838, 0.4099] \\
+\bottomrule
+\end{tabular}
+\end{table}

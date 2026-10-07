@@ -1,0 +1,9 @@
+feature,gain
+grid::summary::center_x_std,2018.2563285827637
+grid::summary::center_z_std,1378.8932666778564
+grid::summary::center_y_std,1350.3917713165283
+grid::summary::grid_size_mean,1295.820335706075
+grid::summary::grid_size_min,907.7698448499043
+grid::summary::unique_grid_sizes,472.97764690717065
+grid::summary::grid_size_max,280.78606160481775
+grid::summary::pocket_membership_count,266.01427491505945

@@ -1,0 +1,13 @@
+{
+  "experiment": "base_plm_ft",
+  "model": "facebook/esm2_t33_650M_UR50D",
+  "mode": "lora",
+  "epochs": 3,
+  "lr_head": 0.0001,
+  "lr_encoder": 0.0001,
+  "max_tokens": 1022,
+  "accum": 8,
+  "seed": 0,
+  "cross_fitting": "fold f predicted by an encoder trained on the other three folds; test predicted by an encoder trained on all 885 training proteins",
+  "embedding_cache": "/home/yavuz/yavuz_proje/cryptic_binding_site/cryptobench_gridfusion_suite_github_2/cryptobench_gridfusion_suite/additional_experiment/results/cache_esm_ft"
+}

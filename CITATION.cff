@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software in academic work, please cite the associated manuscript and this repository."
+title: "Cryptic Binding-Site Prediction with a pLM-Anchored Spatial GNN"
+type: software
+authors:
+  - family-names: "Uğurlu"
+    given-names: "Sadettin Yavuz"
+    email: "syavuzugurlu@akdeniz.edu.tr"
+repository-code: "https://github.com/yauz3/cryptic-binding-site-spatial-gnn"
+url: "https://github.com/yauz3/cryptic-binding-site-spatial-gnn"
+version: "1.0.0"
+date-released: "2026-10-07"
+license: "Other"
